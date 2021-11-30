@@ -1,0 +1,38 @@
+<html>
+    <head>
+      <meta name="author" content="Rezon handry Gunawan 2172004">
+    </head>
+    <body>
+        <table border id="myTable"></table>
+        <script>
+            var x = prompt("Besar angka")
+
+            var table = document.getElementById("myTable");
+
+let input=5;
+
+for (let i=0; i<input; i++) {
+  row = table.insertRow(i);
+  let temp=1;
+  
+  for (let j=0; j<=i-1; j++) {
+    cell1 = row.insertCell(j);
+    randomColor=Math.floor(Math.random()*16777215).toString(16);
+    cell1.style.backgroundColor = "#" + randomColor;
+    
+    cell1.innerHTML = temp;
+    temp=temp*(i+1);
+  }
+  
+  for (let j=0; j<=i; j++) {
+    cell2 = row.insertCell(i+j);
+    randomColor=Math.floor(Math.random()*16777215).toString(16);
+    cell2.style.backgroundColor = "#" + randomColor;
+    
+    cell2.innerHTML = temp;
+    temp=temp/(i+1);
+  }
+}
+        </script>
+    </body>
+</html>

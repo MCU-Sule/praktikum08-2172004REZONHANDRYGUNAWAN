@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <meta name="author" content="Rezon handry Gunawan 2172004">
+    </head>
+    <body>
+        <script>
+            let x = prompt("bilangan yang ingin di cek")
+
+            let Test=0
+            for(let i=2; i<=x; i++){
+                if(x%i==0) {
+                    Test=Test+1;
+                }
+            }
+            if (Test==1){
+            document.write(x+" adalah bilangan prima");
+        }else {
+            document.write(x+" bukan bilangan prima");
+        }
+        </script>
+    </body>
+</html>

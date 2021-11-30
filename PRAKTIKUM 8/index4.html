@@ -1,0 +1,43 @@
+<html>
+    <head><meta name="author" content="Rezon handry Gunawan 2172004"></head>
+    <body>
+        <table border id="myTable"></table>
+        <script>
+            var x = prompt("jumlah baris") 
+            var x = prompt("jumlah Kolom")
+            var x = prompt("Warna 1 (Hexadecimal)")
+            var x = prompt("Warna 2 (Hexadecimal)")
+
+            var table = document.getElementById("myTable");
+
+let input=5;
+let warna1=333;
+let warna2=888;
+
+for (let i=0; i<input; i++) {
+  row = table.insertRow(i);
+  let temp=i+1;
+  
+  for (let j=0; j<input; j++) {
+    cell1 = row.insertCell(j);
+    if (i%2==0) {
+      if (j%2==0) {
+        cell1.style.backgroundColor = "#" + warna1;
+      } else {
+        cell1.style.backgroundColor = "#" + warna2;
+      }
+    } else {
+      if (j%2!=0) {
+        cell1.style.backgroundColor = "#" + warna1;
+      } else {
+        cell1.style.backgroundColor = "#" + warna2;
+      }
+    }
+    
+    cell1.innerHTML = temp;
+    temp=temp+i+1;
+  }
+}
+        </script>
+    </body>
+</html>
